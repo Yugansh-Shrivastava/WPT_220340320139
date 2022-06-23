@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+<Br/>Book Id <input type="text" name="whocares" placeholder="bookId" id="ni"/>
+<span>What Happened - Book Added or Not</span>
+
+
+<Br/><Br/>Book Name <input type="text" name="whocares" placeholder="bookName"/>
+<Br/><Br/>
+Book Price <input type="text" name="whocares" placeholder="bookPrice"/>
+<Br/><Br/>
+<button id="b2"> update book</button>
+
+
+
+
+
+</body>
+
+<script src="jquery-3.5.1.min.js"></script>
+<script>//our scrip will come here 
+
+
+
+$(document).ready(()=>
+			$.ajax({
+                    type: "post",
+                    dataType: "text",
+                    url: "http://localhost:8081/ssel",
+					data: {
+                        pqr: y
+                    },
+                    success: function (data) {
+							alert("success data");
+                        
+                    },
+                    error: function (e) {
+                        alert('we have trouble ' + JSON.stringify(e));
+                    }
+                })
+			
+			
+
+		
+
+</script>
+
+
+</html>
